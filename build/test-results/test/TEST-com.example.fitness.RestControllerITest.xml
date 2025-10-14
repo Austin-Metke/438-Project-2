@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.fitness.RestControllerITest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-10-09T20:18:40.597Z" hostname="Gabriels-MacBook-Pro-2.local" time="0.665">
+  <properties/>
+  <testcase name="getRestController()" classname="com.example.fitness.RestControllerITest" time="0.665">
+    <failure message="org.opentest4j.AssertionFailedError: &#10;expected: &quot;&quot;&#10; but was: &quot;{&quot;timestamp&quot;:&quot;2025-10-09T20:18:41.208+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/&quot;}&quot;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: 
+expected: &quot;&quot;
+ but was: &quot;{&quot;timestamp&quot;:&quot;2025-10-09T20:18:41.208+00:00&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;path&quot;:&quot;/&quot;}&quot;
+	at app//com.example.fitness.RestControllerITest.getRestController(RestControllerITest.java:21)
+	at java.base@17.0.12/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.12/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:18:39.845 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.fitness.RestControllerITest]: RestControllerITest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:18:39.891 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.fitness.FitnessApplication for test class com.example.fitness.RestControllerITest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-09T13:18:40.054-07:00  INFO 49188 --- [fitness] [    Test worker] c.example.fitness.RestControllerITest    : Starting RestControllerITest using Java 17.0.12 with PID 49188 (started by gabrielgallagher in /Users/gabrielgallagher/Desktop/current school stuff/438-Project-2)
+2025-10-09T13:18:40.054-07:00  INFO 49188 --- [fitness] [    Test worker] c.example.fitness.RestControllerITest    : No active profile set, falling back to 1 default profile: "default"
+2025-10-09T13:18:40.352-07:00  INFO 49188 --- [fitness] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-10-09T13:18:40.358-07:00  INFO 49188 --- [fitness] [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-09T13:18:40.358-07:00  INFO 49188 --- [fitness] [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-09T13:18:40.382-07:00  INFO 49188 --- [fitness] [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-09T13:18:40.382-07:00  INFO 49188 --- [fitness] [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 321 ms
+2025-10-09T13:18:40.589-07:00  INFO 49188 --- [fitness] [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 56558 (http) with context path '/'
+2025-10-09T13:18:40.594-07:00  INFO 49188 --- [fitness] [    Test worker] c.example.fitness.RestControllerITest    : Started RestControllerITest in 0.65 seconds (process running for 1.076)
+2025-10-09T13:18:41.193-07:00  INFO 49188 --- [fitness] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-09T13:18:41.193-07:00  INFO 49188 --- [fitness] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-09T13:18:41.194-07:00  INFO 49188 --- [fitness] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
