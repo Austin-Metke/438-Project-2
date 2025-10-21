@@ -31,14 +31,14 @@ public class AuthService {
   public record UserDto(Long id, String email, String username) {} // Returns to client
 
   /* Login DTOs */
-  public record LoginRequest(@NotBlank @Email String email, @NotBlank String password, @NotBlank String username, @Nullable String gID) {}
+  public record LoginRequest(@NotBlank @Email String email, @NotBlank String password, String username, @Nullable String gID) {}
   public record LoginResponse(UserDto user /* , String token */) {}
 
   public UserDto register(RegisterRequest req) {
     if (users.existsByEmail(req.email())) {
-      throw new IllegalArgumentException("Email already in use");
+        throw new DuplicateUserException(req.username());
     } else if(users.existsByUsername(req.username())) {
-        throw new IllegalArgumentException("Username already in use");
+        throw new DuplicateUserException(req.email());
     }
     User u = new User();
     u.setEmail(req.email().toLowerCase());
