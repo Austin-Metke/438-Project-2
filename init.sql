@@ -10,9 +10,10 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE IF NOT EXISTS users (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     g_id VARCHAR(255) UNIQUE,
-    username VARCHAR(255) UNIQUE,
-    email VARCHAR(255) UNIQUE,
-    profile_pic TEXT
+    username VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    profile_pic TEXT,
+    password_hash VARCHAR(200)
 ) ENGINE=InnoDB;
 
 -- Create profiles table
