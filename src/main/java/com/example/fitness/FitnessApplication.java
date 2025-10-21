@@ -2,14 +2,12 @@ package com.example.fitness;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class FitnessApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(FitnessApplication.class, args);
-
+		ApplicationContext ctx = SpringApplication.run(FitnessApplication.class, args);
 	}
-
 }
