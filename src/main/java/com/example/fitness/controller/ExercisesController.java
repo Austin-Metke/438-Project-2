@@ -1,24 +1,22 @@
+// src/main/java/com/example/fitness/controller/ExercisesController.java
 package com.example.fitness.controller;
-import com.example.fitness.services.UserService;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.fitness.services.ExercisesService;
+
 @RestController
 @RequestMapping("/api/exercises")
 public class ExercisesController {
-    private final UserService userService;
+  private final ExercisesService exercisesService;
+  public ExercisesController(ExercisesService exercisesService) { this.exercisesService = exercisesService; }
 
-    public ExercisesController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @GetMapping("/exercise/{id}")
-    public ResponseEntity<String> getUserName(@PathVariable Long id){
-        String name = userService.getNameById(id);
-        return new ResponseEntity<>(name, HttpStatus.OK);
-    }
+  @GetMapping("/exercise")
+  public ResponseEntity<String> getExerciseName(@PathVariable Long id){
+    return ResponseEntity.ok(exercisesService.getNameById(id));
+  }
 }
