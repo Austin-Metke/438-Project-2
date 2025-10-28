@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.fitness.entity.ExercisesEntity;
 import com.example.fitness.repository.ExercisesRepository;
+import java.util.List;
 
 @Service
 public class ExercisesService {
@@ -14,5 +15,10 @@ public class ExercisesService {
     ExercisesEntity ex = repo.findById(id)
         .orElseThrow(() -> new IllegalArgumentException("Exercise not found: " + id));
     return ex.getName();
+  }
+
+  public List<ExercisesEntity> getAllExercises(){
+    List<ExercisesEntity> ex = repo.findAll();
+    return ex;
   }
 }

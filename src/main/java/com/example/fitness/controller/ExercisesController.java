@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.fitness.services.ExercisesService;
+import com.example.fitness.entity.ExercisesEntity;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/exercises")
@@ -16,7 +19,7 @@ public class ExercisesController {
   public ExercisesController(ExercisesService exercisesService) { this.exercisesService = exercisesService; }
 
   @GetMapping("/exercise")
-  public ResponseEntity<String> getExerciseName(@PathVariable Long id){
-    return ResponseEntity.ok(exercisesService.getNameById(id));
+  public ResponseEntity<List<ExercisesEntity>> getExercises(){
+    return ResponseEntity.ok(exercisesService.getAllExercises());
   }
 }
