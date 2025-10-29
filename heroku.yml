@@ -2,4 +2,5 @@ build:
   docker:
     web: Dockerfile
 run:
-  web: bundle exec puma -C config/puma.rb
+  # This command is for a Java application, ensuring consistency with the expected runtime.
+  web: java $JAVA_OPTS -Xmx300m -Dserver.port=$PORT -jar build/libs/*.jar
